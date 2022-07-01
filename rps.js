@@ -52,12 +52,12 @@ function playRound(playerSelection, computerSelection, score){
     }
 }
 
-function game(){
-    for (let i = 0; i < 5; i++){
-        let playerSelection = prompt("Select from Rock, Paper, Scissors: ");
-        let computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log("Score: " + userScore + " vs " + compScore);
-    }
-}
-game();
+// function game(){
+//     for (let i = 0; i < 5; i++){
+//         let playerSelection = prompt("Select from Rock, Paper, Scissors: ");
+//         let computerSelection = computerPlay();
+//         console.log(playRound(playerSelection, computerSelection));
+//         console.log("Score: " + userScore + " vs " + compScore);
+//     }
+// }
+// game();
