@@ -11,47 +11,57 @@ function computerPlay(){
         return "scissors";
     }
 }
+function updateScore(winner){
+    const userScore = document.querySelector('.user-score');
+    const compScore = document.querySelector('.comp-score');
+    if(winner === "user"){
+        userScore.textContent = parseInt(userScore.textContent) + 1;
+    }
+    else if(winner === "comp"){
+        compScore.textContent = parseInt(compScore.textContent) + 1;
+    }
+}
+function playRound(e){
+    let computerSelection = computerPlay();
+    let playerSelection = e.target.value;
+    const event = document.querySelector('.event');
 
-function playRound(playerSelection, computerSelection, score){
-    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
-        return "Draw"
+        event.textContent = "Draw"
     }
     else if (playerSelection === "paper"){
         if(computerSelection === "rock"){
-            userScore++;
-            return "You Win! Paper beats Rock";
+            updateScore("user");
+            event.textContent = "You Win! Paper beats Rock";
         }
         else if(computerSelection === "scissors"){
-            compScore++;
-            return "You Lose! Scissors beats Paper";
+            updateScore("comp");
+            event.textContent = "You Lose! Scissors beats Paper";
         }
     }
     else if (playerSelection === "scissors"){
         if(computerSelection === "paper"){
-            userScore++;
-            return "You Win! Scissors beats Paper";
+            updateScore("user");
+            event.textContent = "You Win! Scissors beats Paper";
         }
         else if(computerSelection === "rock"){
-            compScore++;
-            return "You Lose! Rock beat Scissors";
+            updateScore("comp");
+            event.textContent = "You Lose! Rock beat Scissors";
         }
     }
     else if (playerSelection === "rock"){
         if(computerSelection === "scissors"){
-            userScore++;
-            return "You Win! Rock beats Scissors";
+            updateScore("user");
+            event.textContent = "You Win! Rock beats Scissors";
         }
         else if(computerSelection === "paper"){
-            compScore++;
-            return "You Lose! Paper beats Rock";
+            updateScore("comp");
+            event.textContent = "You Lose! Paper beats Rock";
         }
     }
-    else{
-        return "Spelling mistake"
-    }
 }
-
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', playRound));
 // function game(){
 //     for (let i = 0; i < 5; i++){
 //         let playerSelection = prompt("Select from Rock, Paper, Scissors: ");
