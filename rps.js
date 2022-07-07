@@ -1,4 +1,3 @@
-let userScore = 0, compScore = 0;
 function computerPlay(){
     random = Math.floor(Math.random() * 3);
     if(random === 0){
@@ -14,10 +13,13 @@ function computerPlay(){
 function updateScore(winner){
     const userScore = document.querySelector('.user-score');
     const compScore = document.querySelector('.comp-score');
-    if(winner === "user"){
+    if(userScore.textContent == 5 || compScore.textContent == 5){
+        reset(userScore, compScore, winner);
+    }
+    if(winner === "User"){
         userScore.textContent = parseInt(userScore.textContent) + 1;
     }
-    else if(winner === "comp"){
+    else if(winner === "Computer"){
         compScore.textContent = parseInt(compScore.textContent) + 1;
     }
 }
@@ -31,34 +33,39 @@ function playRound(e){
     }
     else if (playerSelection === "paper"){
         if(computerSelection === "rock"){
-            updateScore("user");
+            updateScore("User");
             event.textContent = "You Win! Paper beats Rock";
         }
         else if(computerSelection === "scissors"){
-            updateScore("comp");
+            updateScore("Computer");
             event.textContent = "You Lose! Scissors beats Paper";
         }
     }
     else if (playerSelection === "scissors"){
         if(computerSelection === "paper"){
-            updateScore("user");
+            updateScore("User");
             event.textContent = "You Win! Scissors beats Paper";
         }
         else if(computerSelection === "rock"){
-            updateScore("comp");
+            updateScore("Computer");
             event.textContent = "You Lose! Rock beat Scissors";
         }
     }
     else if (playerSelection === "rock"){
         if(computerSelection === "scissors"){
-            updateScore("user");
+            updateScore("User");
             event.textContent = "You Win! Rock beats Scissors";
         }
         else if(computerSelection === "paper"){
-            updateScore("comp");
+            updateScore("Computer");
             event.textContent = "You Lose! Paper beats Rock";
         }
     }
+}
+function reset(userScore, compScore, winner){
+    userScore.textContent = "0";
+    compScore.textContent = "0";
+    alert(`${winner} has won the game`);
 }
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', playRound));
