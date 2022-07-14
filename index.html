@@ -5,22 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="rps.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Rock Paper Scissors</h1>
-        <h2>First to 5 wins</h2>
     </header>
-    <section>
-        <button value="rock">Rock</button>
-        <button value="paper">Paper</button>
-        <button value="scissors">Scissors</button>
-    </section>
-    <section>
-        <p class="user-score">0</p>
-        <p class="comp-score">0</p>
+    <div class="intructions center">
+        <h2>Choose your weapon</h2>
+        <h3>First to 5 wins</h3>
+    </div>
+    <div class="buttons center">
+        <div class="card">
+            <input type="image" src="images/stone.png" name="rock" value="rock">
+            <label for="rock">Rock</label>
+        </div>
+        <div class="card">
+            <input type="image" src="images/paperwork.png" name="paper" value="paper">
+            <label for="paper">Paper</label>
+        </div>
+        <div class="card">
+            <input type="image" src="images/scissors.png" name="scissors" value="scissors">
+            <label for="scissors">Scissors</label>
+        </div>
+    </div>
+    <div class="score center">
+        <div class="user center">
+            <h3>User Score</h3>
+            <p class="user-score">0</p>
+        </div>
+        <div class="comp center">
+            <h3>Computer Score</h3>
+            <p class="comp-score">0</p> 
+        </div>
+    </div>
+    <div class="response center">
         <p class="event">Game Begins</p>
-    </section>
+    </div>
 </body>
 </html>
