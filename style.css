@@ -80,9 +80,11 @@ select {
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #CAF0F8;
+    font-size: 18px;
 }
+
 header{
-    padding: 3vh;
+    padding: 3vh 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,9 +94,23 @@ header{
 }
 
 input{
-    width: 7rem;
+    width: 10rem;
     height: auto;
-    margin: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: #03045E solid 2px;
+    border-radius: 10px;
+}
+
+input:hover{
+    background-color: #00B4D8;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .center{
@@ -105,23 +121,39 @@ input{
 }
 
 .intructions{
-    padding: 2rem;
+    padding: 2rem 0;
     font-size: 1.2rem;
 }
 
 .buttons{
     flex-direction: row;
-    padding: 2rem;
+    padding: 2rem 0;
 }
+
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-inline: 2rem;
 }
-.score{
-    padding: 2rem 30vw;
-    display: flex;
+
+.score-box{
+    padding: 2rem 0;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;    
+    align-items: center;
+}
+
+.score{
+    padding: 1rem 2rem;
+}
+.playAgain{
+    margin: 0 auto 2rem;
+    background-color: #0077B6;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: #03045E solid 2px;
+    border-radius: 10px;
+}
+.hide{
+    display: none;
 }

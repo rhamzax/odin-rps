@@ -15,36 +15,37 @@
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-    <div class="intructions center">
-        <h2>Choose your weapon</h2>
-        <h3>First to 5 wins</h3>
-    </div>
-    <div class="buttons center">
-        <div class="card">
-            <input type="image" src="images/stone.png" name="rock" value="rock">
-            <label for="rock">Rock</label>
+        <div class="intructions center">
+            <h2>Choose your weapon</h2>
+            <h3>First to 5 wins</h3>
         </div>
-        <div class="card">
-            <input type="image" src="images/paperwork.png" name="paper" value="paper">
-            <label for="paper">Paper</label>
+        <div class="buttons center">
+            <div class="card">
+                <input type="image" src="images/stone.png" name="rock" value="rock">
+                <label for="rock">Rock</label>
+            </div>
+            <div class="card">
+                <input type="image" src="images/paperwork.png" name="paper" value="paper">
+                <label for="paper">Paper</label>
+            </div>
+            <div class="card">
+                <input type="image" src="images/scissors.png" name="scissors" value="scissors">
+                <label for="scissors">Scissors</label>
+            </div>
         </div>
-        <div class="card">
-            <input type="image" src="images/scissors.png" name="scissors" value="scissors">
-            <label for="scissors">Scissors</label>
+        <div class="score-box center">
+            <div class="score center card">
+                <h3>User Score</h3>
+                <p class="user-score">0</p>
+            </div>
+            <div class="score center card">
+                <h3>Computer Score</h3>
+                <p class="comp-score">0</p> 
+            </div>
         </div>
-    </div>
-    <div class="score center">
-        <div class="user center">
-            <h3>User Score</h3>
-            <p class="user-score">0</p>
+        <button class="playAgain center hide">Play Again</button>
+        <div class="response center">
+            <h3 class="event">Game Begins</h3>
         </div>
-        <div class="comp center">
-            <h3>Computer Score</h3>
-            <p class="comp-score">0</p> 
-        </div>
-    </div>
-    <div class="response center">
-        <p class="event">Game Begins</p>
-    </div>
 </body>
 </html>
